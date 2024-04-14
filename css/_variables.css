@@ -1,0 +1,12 @@
+:root {     
+    --colorNone: transparent;
+    --colorBgPrimary: #ea5048;
+    --colorBgSecondary: #27354a;
+    --colorBgAccent: #d2d3d3;
+    --colorTextPrimary: floralwhite;
+    --colorTextAccent: #ebcd9a;    
+    --colorBgMenuCard: #fafad2;    
+    --fontSizePrimary: 0.8rem;
+    --fontSizeSecondary: 0.9rem;
+    --fontDefault: verdana, Arial, sans-serif;
+}

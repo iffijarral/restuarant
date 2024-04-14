@@ -1,0 +1,133 @@
+@import url('_variables.css');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+body {    
+    font-family: var(--fontDefault);    
+    line-height: 1.5;
+    font-size: var(--fontSizePrimary);
+}
+header {
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: var(--colorBgPrimary);
+    color: var(--colorTextPrimary);
+}
+section {        
+    padding: 1rem;
+    --max-width: 1200px;
+    --padding: 1rem;
+    width: min(var(--max-width), 100% - var(--padding)*2);  
+    margin-inline: auto;
+}
+footer {
+    background-color: var(--colorBgSecondary);
+    color: var(--colorTextPrimary);
+    font-size: var(--fontSizeSecondary);
+    padding: .5rem;
+}
+footer > p {
+    margin-inline: auto;
+    width: fit-content;
+}
+@media screen and (min-width: 768px) {
+    body {
+        padding-bottom: 35px;
+    }
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 35px;
+    }
+}
+
+img {
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+}
+@media screen and (min-width: 768px) {
+    img {
+        width: auto;
+    }
+}
+ul {
+    list-style: none;
+}
+blockquote {
+    padding: .5rem;
+    background-color: var(--colorBgAccent);
+    font-size: var(--fontSizePrimary);
+}
+blockquote > footer {
+    padding: 0.5rem 1rem;
+    position: relative;
+    background-color: var(--colorNone);
+    color: var(--colorBgSecondary);
+
+}
+
+#nav-main {
+    width: 100%;
+    padding: .5rem 2rem;
+    background-color: var(--colorBgSecondary);
+}
+#nav-main ul{            
+    display: flex;        
+    flex-direction: column;    
+    align-items: center;
+}
+#nav-main ul li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid var(--colorTextPrimary);
+}
+#nav-main ul li:last-child {
+    border-bottom: none;
+}
+@media screen and (min-width: 375px) {
+    #nav-main ul{
+        flex-direction: row;
+        align-items: start;        
+        gap: 2rem;
+    }
+    #nav-main ul li {
+        width: auto;
+        text-align: left;        
+        border-bottom: none
+    }
+}
+#nav-main ul li a {
+    text-decoration: none;
+    color: var(--colorTextPrimary);
+}
+.active {
+    color: var(--colorTextAccent) !important;
+    font-weight: bold;
+}
+#about {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 2rem;
+}
+@media screen and (min-width: 768px) {
+    #about {
+        flex-wrap: nowrap;
+    }
+}
+#about p {
+    font-size: var(--fontSizePrimary)
+}
+#about ul {
+    padding-top: 1rem;
+}
+#about ul li {
+    padding: .2rem;
+    color: var(--colorBgPrimary);
+    font-size: var(--fontSizeSecondary);
+    font-weight: 500;
+}
